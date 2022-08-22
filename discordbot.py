@@ -1,12 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
 import discord
-import threading
 import asyncio
+from dotenv import dotenv_values
 
 currentTrackers = set()
 
-token = "MTAxMTA2OTY4NTAwNzEzNDg0Mw.GGzPK3.EX5L7M-f9Rji5oMfnFb8GsetxNLThCS7P--5kk"
+token = dotenv_values(".env")["TOKEN"]
 
 intents = discord.Intents.default()
 intents.message_content = True
